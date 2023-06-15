@@ -27,12 +27,12 @@ class ImagePublisher(Node):
     self.publisher_ = self.create_publisher(Image, 'video_frames', 10)
       
     # We will publish a message every 0.1 seconds
-    timer_period = 0.1  # seconds
+    timer_period = 0.5  # seconds
       
     # Create the timer
     self.timer = self.create_timer(timer_period, self.timer_callback)
          
-    self.cap = cv2.VideoCapture('./assets/siu.mp4')
+    self.cap = cv2.VideoCapture('./assets/bowserPlay.mp4')
          
     # Used to convert between ROS and OpenCV images
     self.br = CvBridge()
