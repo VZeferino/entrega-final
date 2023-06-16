@@ -1,29 +1,9 @@
-[Voltar para o repositório principal :house:](https://github.com/rmnicola/m6-ec-encontros.git)
+# Explicação da implementação
 
-# Integração de sistemas 1<!-- omit in toc -->
+O código consiste em dois arquivos principais: um publisher e um subscriber. O publisher captura frames em um intervalo, definido por mim, de um arquivo de vídeo e os publica em um tópico. O subscriber recebe os quadros publicados nesse tópico, converte-os em formato adequado e os salva localmente. Por fim, na rota "/images" realiza o upload das imagens para o Supabase. O Supabase é uma plataforma que permite armazenar e gerenciar arquivos de forma eficiente.
 
-## Objetivos do encontro
-* Apresentar exemplos úteis para a integração dos sistemas relacionados ao projeto.
+O publisher usa a biblioteca rclpy para se comunicar com o ROS 2, enquanto o subscriber recebe os frames do tópico usando a mesma biblioteca. A conversão dos quadros é feita com o auxílio da biblioteca CvBridge, que converte entre os formatos de imagem do ROS 2 e do OpenCV.
 
-## Conteúdo <!-- omit in toc -->
+O servidor salva os quadros em uma pasta local chamada "recebidos" e, em seguida, realiza o upload desses quadros para o Supabase usando a biblioteca Supabase Python. O Supabase é configurado com uma URL e uma chave de acesso, permitindo o envio dos quadros para um bucket específico chamado "arquivos".
 
-- [Objetivos do encontro](#objetivos-do-encontro)
-- [Leitura de vídeo com opencv](#leitura-de-vídeo-com-opencv)
-- [Tranmissão de imagens utilizando o ROS](#tranmissão-de-imagens-utilizando-o-ros)
-- [Transmissão de imagens utilizando o ROS e backend sanic](#transmissão-de-imagens-utilizando-o-ros-e-backend-sanic)
-- [Exemplos utilizando o Supabase para armazenar imagens](#exemplos-utilizando-o-supabase-para-armazenar-imagens)
-
-## Leitura de vídeo com opencv
-
-**Vídeo incoming**
-
-## Tranmissão de imagens utilizando o ROS
-
-**Vídeo incoming**
-
-## Transmissão de imagens utilizando o ROS e backend sanic
-
-**Vídeo incoming**
-
-## Exemplos utilizando o Supabase para armazenar imagens
-[Repositório de exemplos](https://github.com/Murilo-ZC/Supabase-Testes)
+#Vídeo da implementação
