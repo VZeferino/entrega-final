@@ -6,4 +6,6 @@ O publisher usa a biblioteca rclpy para se comunicar com o ROS 2, enquanto o sub
 
 O servidor salva os quadros em uma pasta local chamada "recebidos" e, em seguida, realiza o upload desses quadros para o Supabase usando a biblioteca Supabase Python. O Supabase é configurado com uma URL e uma chave de acesso, permitindo o envio dos quadros para um bucket específico chamado "arquivos".
 
-#Vídeo da implementação
+# Vídeo da implementação
+
+[video-demonstrando.webm](https://github.com/VZeferino/entrega-final/assets/99190423/211640bb-7170-4f0f-8e0c-23c3472ead30)
